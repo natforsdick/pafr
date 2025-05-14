@@ -158,8 +158,8 @@ dotplot <- function(ali, order_by = c("size", "qstart", "provided"),
       scale_x_continuous(xlab, labels = Mb_lab) + 
       scale_y_continuous(ylab, labels = Mb_lab)
   if (dashes) {
-      p <- p + geom_hline(yintercept = c(seq_maps[["tmap"]], sum(unique(ali$tlen))), linetype = 3) +
-               geom_vline(xintercept = c(seq_maps[["qmap"]], sum(unique(ali$qlen))), linetype = 3)
+      p <- p + geom_hline(yintercept = c(seq_maps[["tmap"]], sum(unique(ali$tlen))), linetype = 0) +
+               geom_vline(xintercept = c(seq_maps[["qmap"]], sum(unique(ali$qlen))), linetype = 0)
   }
   if (label_seqs) {
     qname_df <- dotplot_name_df(seq_maps[["qmap"]], seq_maps[["qsum"]])
